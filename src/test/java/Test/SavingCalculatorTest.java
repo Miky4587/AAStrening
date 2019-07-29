@@ -42,6 +42,15 @@ public class SavingCalculatorTest {
         driver.findElement(By.cssSelector("button.btn-block")).isEnabled();
     }
 
+    @Test
+    public void itShouldNotSelectAnyFoundOnPageOpen(){
+        new Select(driver.findElement(By.id("fundSelect"))).getFirstSelectedOption().getText();
+        System.out.println(new Select(driver.findElement(By.id("fundSelect"))).getFirstSelectedOption().getText());
+        Assert.assertEquals("Select Your Fund",new Select(driver.findElement(By.id("fundSelect"))).getFirstSelectedOption().getText()
+        );
+
+    }
+
     @After
     public void TearDown() {
  /*       driver.close();
