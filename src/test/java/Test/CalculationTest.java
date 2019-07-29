@@ -28,6 +28,7 @@ public class CalculationTest {
         driver.findElement(By.id("emailInput")).sendKeys("aaa@bbb.ccc");
         driver.findElement(By.cssSelector("div.result > div:nth-child(1) > p")).getText();
         Assert.assertFalse(driver.findElement(By.cssSelector("div.result > div:nth-child(1) > p")).getText().isEmpty());
+        Assert.assertTrue(driver.findElement(By.cssSelector("div.result > div:nth-child(1) > p")).getText().contains("kr"));
     }
 
     @Test
