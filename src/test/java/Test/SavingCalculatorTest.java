@@ -46,7 +46,7 @@ public class SavingCalculatorTest {
     public void itShouldNotSelectAnyFoundOnPageOpen(){
         new Select(driver.findElement(By.id("fundSelect"))).getFirstSelectedOption().getText();
         System.out.println(new Select(driver.findElement(By.id("fundSelect"))).getFirstSelectedOption().getText());
-        Assert.assertEquals("Select Your Fund",new Select(driver.findElement(By.id("fundSelect"))).getFirstSelectedOption().getText()
+        Assert.assertEquals("Select your fund",new Select(driver.findElement(By.id("fundSelect"))).getFirstSelectedOption().getText()
         );
 
     }
