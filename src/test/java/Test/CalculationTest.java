@@ -1,21 +1,13 @@
 package Test;
 
+import Base.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
 public class CalculationTest extends TestBase {
-    WebDriver driver;
 
-    @Before
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get("http://localhost/savingscalculator.php");
-    }
+
 
     @Test
     public void itShouldCalculateTotalIncome() {
@@ -77,11 +69,6 @@ public class CalculationTest extends TestBase {
         driver.findElement(By.id("yearsInput")).sendKeys(yearsToEnter);
     }
 
-    @After
-    public void TearDown() {
-        driver.close();
-        driver.quit();
-    }
 
 }
 

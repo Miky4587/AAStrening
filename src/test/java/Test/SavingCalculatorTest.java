@@ -1,25 +1,13 @@
 package Test;
 
-import org.junit.After;
+import Base.TestBase;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class SavingCalculatorTest {
+public class SavingCalculatorTest extends TestBase {
 
-    WebDriver driver;
-
-    @Before
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get("http://localhost/savingscalculator.php");
-    }
 
     @Test
     public void itShouldBeTitle() {
@@ -49,12 +37,6 @@ public class SavingCalculatorTest {
         Assert.assertEquals("Select your fund",new Select(driver.findElement(By.id("fundSelect"))).getFirstSelectedOption().getText()
         );
 
-    }
-
-    @After
-    public void TearDown() {
- /*       driver.close();
-          driver.quit(); */
     }
 
 }

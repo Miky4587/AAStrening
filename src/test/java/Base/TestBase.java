@@ -3,10 +3,12 @@ package Base;
 
 import org.junit.After;
 import org.junit.Before;
-import org.
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class testBase
-WebDriver driver;
+public class TestBase {
+
+protected WebDriver driver;
 
 @Before
 public void setUp() {
@@ -19,3 +21,4 @@ public void TearDown() {
         driver.close();
         driver.quit();
         }
+}
