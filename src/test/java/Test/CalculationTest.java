@@ -59,17 +59,14 @@ public class CalculationTest {
             selectfund(arrayOfFund);
             oneTimeInvestmentInput("5000");
             enterYears( "10");
-            Assert.assertFalse(driver
-                    .findElement(By.cssSelector("div.result > div:nth-child(1) > p"))
-                    .getText()
-                    .isEmpty());
-            Assert.assertTrue(driver
-                    .findElement(By.cssSelector("div.result > div:nth-child(1) > p"))
-                    .getText()
-                    .contains("kr"));
+            Assert.assertFalse(getTotalIncome().isEmpty());
+            Assert.assertTrue(getTotalIncome().contains("kr"));
         }
     }
 
+    private String getTotalIncome() {
+        return driver.findElement(By.cssSelector("div.result > div:nth-child(1) > p")).getText();
+    }
 
     private void selectfund(String fundSelect){
         new Select(driver.findElement(By.id("fundSelect"))).selectByVisibleText("fundSelect");
