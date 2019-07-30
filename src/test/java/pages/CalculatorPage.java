@@ -43,7 +43,6 @@ public class CalculatorPage {
         pageDriver.findElement(By.id("emailInput")).clear();
         pageDriver.findElement(By.id("emailInput")).sendKeys(emailToEnter);
         pageDriver.findElement(By.id("emailInput")).sendKeys(TAB);
-
     }
 
     public void submitRequest() {
