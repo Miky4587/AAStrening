@@ -28,5 +28,19 @@ public class NewSavingRequestTest extends TestBase {
                         driver.findElement(By.xpath("ul.saving-list > li div.amounts > p > span")).getText());
 
     }
+
+    @Test
+    public void itShouldDisplayTwentyRequest() {
+        CalculatorPage calculatorPage = new CalculatorPage(driver);
+        for (int i = 0; i < 20; i++) {
+        calculatorPage.selectFund("McDuck's safe");
+        calculatorPage.oneTimeInvestmentInput("100");
+        calculatorPage.enterYears("14");
+        calculatorPage.enterEmail("aaa@bbb.ccc");
+        String calculatedIncome = calculatorPage.getTotalIncome();
+        calculatorPage.submitRequest();
+    }
+
+    }
 }
 

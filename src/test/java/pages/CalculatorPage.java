@@ -28,16 +28,18 @@ public class CalculatorPage {
     }
 
     public void oneTimeInvestmentInput(String amountToEnter){
+        pageDriver.findElement(By.id("oneTimeInvestmentInput")).clear();
         pageDriver.findElement(By.id("oneTimeInvestmentInput")).sendKeys(amountToEnter);
     }
 
     public void enterYears(String yearsToEnter){
+        pageDriver.findElement(By.id("yearsInput")).clear();
         pageDriver.findElement(By.id("yearsInput")).sendKeys(yearsToEnter);
     }
 
     public void enterEmail (String emailToEnter) {
         pageDriver.findElement(By.id("emailInput")).clear();
-        pageDriver.findElement(By.id("emailInput")).sendKeys("emailToEnter");
+        pageDriver.findElement(By.id("emailInput")).sendKeys(emailToEnter);
 
     }
 
