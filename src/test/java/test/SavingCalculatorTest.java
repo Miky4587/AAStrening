@@ -1,6 +1,6 @@
-package Test;
+package test;
 
-import Base.TestBase;
+import base.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -18,13 +18,12 @@ public class SavingCalculatorTest extends TestBase {
 
     @Test
     public void ItShouldEnableApllyButton() {
-        CalculatorPage calculatorPage = new CalculatorPage();
+        CalculatorPage calculatorPage = new CalculatorPage(driver);
         calculatorPage.selectFund("McDuck's safe");
         new Select(driver.findElement(By.id("fundSelect"))).selectByVisibleText("McDuck's safe");
         driver.findElement(By.id("fundSelect")).sendKeys("McDuck's safe");
         driver.findElement(By.id("oneTimeInvestmentInput")).sendKeys("5000");
         driver.findElement(By.id("yearsInput")).sendKeys("10");
-        driver.findElement(By.id("emailInput")).sendKeys("aaa@bbb.ccc");
     }
 
 
