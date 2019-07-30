@@ -51,6 +51,7 @@ public class CalculationTest extends TestBase {
             calculatorPage.selectfund(arrayOfFund);
             calculatorPage.oneTimeInvestmentInput("5000");
             calculatorPage.enterYears( "10");
+            calculatorPage.enterEmail("aaa@bbb.ccc");
             Assert.assertFalse(calculatorPage.getTotalIncome().isEmpty());
             Assert.assertTrue(calculatorPage.getTotalIncome().contains("kr"));
         }

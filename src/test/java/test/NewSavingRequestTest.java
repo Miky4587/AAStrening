@@ -20,12 +20,12 @@ public class NewSavingRequestTest extends TestBase {
 
         Assert.assertEquals(
                 calculatedIncome,
-                driver.findElement(By.xpath("//ul[contains(@class,'saving-list')]/li/div[contains(@class,'amounts')]/p/span")).getText());
+                driver.findElement(By.xpath("//ul[contains(@class,'saving-list')]/li//div[contains(@class,'amounts')]/p/span")).getText());
 
 
                 Assert.assertEquals(
                         calculatedIncome,
-                        driver.findElement(By.xpath("ul.saving-list > li div.amounts > p > span")).getText());
+                        driver.findElement(By.cssSelector("ul.saving-list > li div.amounts > p > span")).getText());
 
     }
 
