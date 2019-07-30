@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
+import pages.CalculatorPage;
 
 public class SavingCalculatorTest extends TestBase {
 
@@ -17,6 +18,8 @@ public class SavingCalculatorTest extends TestBase {
 
     @Test
     public void ItShouldEnableApllyButton() {
+        CalculatorPage calculatorPage = new CalculatorPage();
+        calculatorPage.selectFund("McDuck's safe");
         new Select(driver.findElement(By.id("fundSelect"))).selectByVisibleText("McDuck's safe");
         driver.findElement(By.id("fundSelect")).sendKeys("McDuck's safe");
         driver.findElement(By.id("oneTimeInvestmentInput")).sendKeys("5000");

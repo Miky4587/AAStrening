@@ -5,12 +5,17 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
+import pages.CalculatorPage;
+
 public class CalculationTest extends TestBase {
 
 
 
     @Test
     public void itShouldCalculateTotalIncome() {
+        CalculatorPage calculatorPage = new calculatorPage();
+        CalculatorPage.selectFund("McDuck's safe");
+
         new Select(driver.findElement(By.id("fundSelect"))).selectByVisibleText("McDuck's safe");
         selectfund("McDuck's safe");
         driver.findElement(By.id("oneTimeInvestmentInput")).sendKeys("5000");
@@ -43,6 +48,8 @@ public class CalculationTest extends TestBase {
 
     @Test
     public void itShouldCalculateTotoalForEachFund(){
+        CalculatorPage calculatorPage = new CalculatorPage();
+
         String[] arrayOfFunds = {"Batman's Cave Development", "McDuck's safe", "Tom & Jerry corp"};
         for (String arrayOfFund : arrayOfFunds) {
             selectfund(arrayOfFund);
