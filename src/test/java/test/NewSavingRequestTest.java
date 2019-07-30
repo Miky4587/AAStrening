@@ -9,7 +9,7 @@ import pages.CalculatorPage;
 public class NewSavingRequestTest extends TestBase {
 
     @Test
-    public void itShouldDisplyTotalIncomeInNewRequest() {
+    public void itShouldDisplayTotalIncomeInNewRequest() {
         CalculatorPage calculatorPage = new CalculatorPage(driver);
         calculatorPage.selectFund("McDuck's safe");
         calculatorPage.oneTimeInvestmentInput("5000");
