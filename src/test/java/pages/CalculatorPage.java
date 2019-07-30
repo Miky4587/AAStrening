@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import static org.openqa.selenium.Keys.TAB;
+
 
 public class CalculatorPage {
     private WebDriver pageDriver;
@@ -40,6 +42,7 @@ public class CalculatorPage {
     public void enterEmail (String emailToEnter) {
         pageDriver.findElement(By.id("emailInput")).clear();
         pageDriver.findElement(By.id("emailInput")).sendKeys(emailToEnter);
+        pageDriver.findElement(By.id("emailInput")).sendKeys(TAB);
 
     }
 
